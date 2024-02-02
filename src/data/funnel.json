@@ -1,0 +1,548 @@
+[
+	{
+		"funnel_name": "Manuelle Therapie - Termin vereinbaren",
+		"slides": [
+			{
+				"id": "welche-beschwerde",
+				"title": "Buchen Sie jetzt schnell und unkompliziert Ihren Termin 📅",
+				"subtitle": "Wir stellen Ihnen einige Fragen, damit wir uns auf unseren ersten Termin vorbereiten können!",
+				"subtitle_highlight": true,
+				"title_before_content": "Welche Beschwerden haben Sie?",
+				"reason": false,
+				"question": "Welche Beschwerden haben Sie?",
+				"type": "image_selection",
+				"image_options": [
+					{
+						"url": "https://dev-pro-physio.strayfe.dev/wp-content/uploads/2023/11/Startseite-Hero-Manuelle-Therapie.jpg",
+						"title": "Rückenschmerzen",
+						"value": "Rueckenschmerzen"
+					},
+					{
+						"url": "https://dev-pro-physio.strayfe.dev/wp-content/uploads/2023/11/symptome-nacken.jpg",
+						"title": "Nackenschmerzen",
+						"value": "Nackenschmerzen"
+					},
+					{
+						"url": "https://dev-pro-physio.strayfe.dev/wp-content/uploads/2023/11/symptome-rehabilitation.jpg",
+						"title": "Gelenkbeschwerden",
+						"value": "Gelenkbeschwerden"
+					},
+					{
+						"url": "https://dev-pro-physio.strayfe.dev/wp-content/uploads/2024/01/Manuelle-Lymphdrainage.jpg",
+						"title": "Etwas anderes",
+						"value": "Etwas anderes"
+					}
+				],
+				"icon_options": false,
+				"text_options": false,
+				"input_options": false,
+				"alternative_type": false,
+				"show_progressbar": false,
+				"step": "",
+				"step_count": "",
+				"multiselect": false,
+				"show_send_btn": false
+			},
+			{
+				"id": "interesse",
+				"title": "Haben Sie ein Rezept vom Arzt?",
+				"subtitle": false,
+				"subtitle_highlight": true,
+				"reason": false,
+				"question": "Haben Sie ein Rezept vom Arzt?",
+				"type": "icon_selection",
+				"image_options": false,
+				"icon_options": [
+					{
+						"icon": "👍",
+						"title": "Ja",
+						"value": "Ja",
+						"next_slide": false,
+						"next_slide_type": null
+					},
+					{
+						"icon": "👎",
+						"title": "Nein",
+						"value": "Nein",
+						"next_slide": "slide-1-fail",
+						"next_slide_type": "content"
+					}
+				],
+				"text_options": false,
+				"input_options": false,
+				"alternative_type": false,
+				"show_progressbar": false,
+				"multiselect": false,
+				"show_send_btn": false
+			},
+			{
+				"id": "versicherung",
+				"title": "Sind Sie gesetzlich oder privat versichert?",
+				"subtitle": false,
+				"subtitle_highlight": false,
+				"reason": false,
+				"question": "Sind Sie gesetzlich oder privat versichert?",
+				"type": "icon_selection",
+				"image_options": false,
+				"icon_options": [
+					{
+						"icon": "🏛️",
+						"title": "Gesetzlich",
+						"value": "Gesetzlich",
+						"next_slide": false,
+						"next_slide_type": null
+					},
+					{
+						"icon": "🤵",
+						"title": "Privat",
+						"value": "Privat",
+						"next_slide": false,
+						"next_slide_type": null
+					}
+				],
+				"text_options": false,
+				"input_options": false,
+				"alternative_type": false,
+				"show_progressbar": false,
+				"multiselect": false,
+				"show_send_btn": false
+			},
+			{
+				"id": "upload_rezept",
+				"title": "Bitte laden Sie ein Foto von Ihrem Rezept hoch",
+				"type": "file_upload",
+				"reason": "Wir benötigen Informationen wie das Heilmittel, um Ihnen den besten Physiotherapeuten an die Seite stellen zu können. Es können nur Bilder hochgeladen werden. Wenn Ihr Rezept ein PDF ist, können Sie einen Screenshot davon machen oder die Rezeptdaten manuell eingeben. <img width='1024' height='767' src='https://dev-pro-physio.strayfe.dev/wp-content/uploads/2024/02/HM_Muster_13_aaec3c5def_csm.webp' class='brxe-image home__leistungen-bild css-filter size-large mt-1' decoding='async'>",
+				"alternative_method": true,
+				"alternative_method_data": {
+					"button_text": "Stattdessen Rezeptdaten eingeben",
+					"answers_data_name": "Angaben zum Rezept",
+					"additional_slide_id": "manual_rezept_data"
+				},
+				"input_options": [
+					{
+						"label": "Rezept hochladen",
+						"placeholder": "Wählen oder Bild aufnehmen",
+						"input_name": "input_rezept",
+						"type": "file",
+						"accept": "image/jpeg, image/png, image/gif, image/heic, image/heif",
+						"max_size": "5"
+					}
+				]
+			},
+			{
+				"id": "opt-in",
+				"title": "Jetzt Termin vereinbaren",
+				"subtitle": "Fast fertig! Bitte geben Sie noch Ihre Kontaktdaten ein, damit wir uns bei Ihnen melden können.",
+				"subtitle_highlight": true,
+				"reason": false,
+				"type": "opt_in",
+				"image_options": false,
+				"icon_options": false,
+				"text_options": false,
+				"input_options": [
+					{
+						"label": "Ihr Vorname",
+						"placeholder": "Ihr Vorname",
+						"value": "first_name",
+						"input_name": "input_vorname",
+						"type": "text",
+						"required": true,
+						"validation": "text"
+					},
+					{
+						"label": "Ihr Nachname",
+						"placeholder": "Ihr Nachname",
+						"value": "last_name",
+						"input_name": "input_nachname",
+						"type": "text",
+						"required": true,
+						"validation": "text"
+					},
+					{
+						"label": "Ihre E-Mail-Adresse",
+						"placeholder": "E-Mail (keine Werbung)",
+						"value": "email",
+						"input_name": "input_email",
+						"type": "text",
+						"required": true,
+						"validation": "email"
+					},
+					{
+						"label": "Ihre Telefonnummer",
+						"placeholder": "Ihre Telefonnummer (bei Rückfragen)",
+						"value": "phone",
+						"input_name": "input_telefon",
+						"type": "number",
+						"required": true,
+						"validation": "text"
+					},
+					{
+						"label": "Anmerkungen (optional)",
+						"placeholder": "Anmerkungen (optional)",
+						"value": "comments",
+						"input_name": "input_comments",
+						"type": "text",
+						"required": false,
+						"validation": "text"
+					},
+					{
+						"label": "",
+						"placeholder": "",
+						"value": "gdpr_accept",
+						"input_name": "input_gdpr",
+						"type": "checkbox",
+						"validation": "checkbox"
+					}
+				],
+				"alternative_type": false,
+				"show_progressbar": false,
+				"multiselect": false,
+				"show_send_btn": true
+			},
+			{
+				"id": "thank-you",
+				"title": "Vielen Dank! Wir haben Ihre Anfrage erhalten.",
+				"subtitle": "Wir melden uns in Kürze bei Ihnen und vereinbaren einen Termin.",
+				"subtitle_highlight": false,
+				"reason": false,
+				"type": "thank_you",
+				"image_options": false,
+				"icon_options": false,
+				"text_options": false,
+				"input_options": false,
+				"alternative_type": false,
+				"thank_you_options": {
+					"img": false,
+					"icon": "🎉"
+				},
+				"show_progressbar": false,
+				"multiselect": false,
+				"show_send_btn": false,
+				"thank_you_content": {
+					"next-steps": false,
+					"benefits": false
+				}
+			}
+		],
+		"additional_slides": [
+			{
+				"id": "manual_rezept_data",
+				"title": "Bitte geben Sie die Rezeptdaten manuell ein",
+				"type": "manual_entry",
+				"input_options": [
+					{
+						"label": "Welches Heilmittel?",
+						"placeholder": "Heilmittel eingeben",
+						"input_name": "Heilmittel",
+						"type": "text"
+					},
+					{
+						"label": "Datum auf dem Rezept",
+						"placeholder": "Datum eingeben",
+						"input_name": "Datum des Heilmittels",
+						"type": "text"
+					},
+					{
+						"label": "Anzahl der Therapien",
+						"placeholder": "Anzahl eingeben",
+						"input_name": "Anzahl der Therapien",
+						"type": "text"
+					}
+				]
+			}
+		],
+		"content_slides": [
+			{
+				"id": "slide-1-fail",
+				"title": "Sie haben kein Rezept vom Arzt und möchte dennoch Leistungen in Anspruch nehmen?",
+				"subtitle": "Dann rufen Sie uns bitte direkt unter <strong>0251 / 971 34 980</strong> an oder senden Sie uns eine Nachricht über das Kontaktformular.",
+				"subtitle_highlight": false,
+				"type": "link_to_page",
+				"link_to_page": "/kontakt/",
+				"link_btn_text": "Nachricht senden",
+				"slide_content": {
+					"normal_text_1": "",
+					"normal_text_2": "",
+					"normal_text_3": ""
+				}
+			}
+		],
+		"homepage_link": "/",
+		"ty_page_link": "/faq/",
+		"ty_btn_name": "Erster Termin: Fragen & Antworten",
+		"gdpr_link": "/datenschutz/"
+	},
+	{
+		"funnel_name": "CMD/CRAFTA Kiefergelenks Therapie - Termin vereinbaren",
+		"slides": [
+			{
+				"id": "welche-beschwerde",
+				"title": "Buchen Sie jetzt schnell und unkompliziert Ihren Termin 📅",
+				"subtitle": "Wir stellen Ihnen einige Fragen, damit wir uns auf unseren ersten Termin vorbereiten können!",
+				"subtitle_highlight": true,
+				"title_before_content": "Welche Beschwerden haben Sie?",
+				"reason": false,
+				"question": "Welche Beschwerden haben Sie?",
+				"type": "image_selection",
+				"image_options": [
+					{
+						"url": "https://dev-pro-physio.strayfe.dev/wp-content/uploads/2023/11/Startseite-Hero-Manuelle-Therapie.jpg",
+						"title": "Kieferbeschwerden",
+						"value": "Kieferbeschwerden"
+					},
+					{
+						"url": "https://dev-pro-physio.strayfe.dev/wp-content/uploads/2023/11/symptome-nacken.jpg",
+						"title": "Schwindel",
+						"value": "Schwindel"
+					},
+					{
+						"url": "https://dev-pro-physio.strayfe.dev/wp-content/uploads/2023/11/symptome-rehabilitation.jpg",
+						"title": "Kopfschmerzen",
+						"value": "Kopfschmerzen"
+					},
+					{
+						"url": "https://dev-pro-physio.strayfe.dev/wp-content/uploads/2024/01/Manuelle-Lymphdrainage.jpg",
+						"title": "Etwas anderes",
+						"value": "Etwas anderes"
+					}
+				],
+				"icon_options": false,
+				"text_options": false,
+				"input_options": false,
+				"alternative_type": false,
+				"show_progressbar": false,
+				"step": "",
+				"step_count": "",
+				"multiselect": false,
+				"show_send_btn": false
+			},
+			{
+				"id": "interesse",
+				"title": "Haben Sie ein Rezept vom Arzt?",
+				"subtitle": false,
+				"subtitle_highlight": true,
+				"reason": false,
+				"question": "Haben Sie ein Rezept vom Arzt?",
+				"type": "icon_selection",
+				"image_options": false,
+				"icon_options": [
+					{
+						"icon": "👍",
+						"title": "Ja",
+						"value": "Ja",
+						"next_slide": false,
+						"next_slide_type": null
+					},
+					{
+						"icon": "👎",
+						"title": "Nein",
+						"value": "Nein",
+						"next_slide": "slide-1-fail",
+						"next_slide_type": "content"
+					}
+				],
+				"text_options": false,
+				"input_options": false,
+				"alternative_type": false,
+				"show_progressbar": false,
+				"multiselect": false,
+				"show_send_btn": false
+			},
+			{
+				"id": "versicherung",
+				"title": "Sind Sie gesetzlich oder privat versichert?",
+				"subtitle": false,
+				"subtitle_highlight": false,
+				"reason": false,
+				"question": "Sind Sie gesetzlich oder privat versichert?",
+				"type": "icon_selection",
+				"image_options": false,
+				"icon_options": [
+					{
+						"icon": "🏛️",
+						"title": "Gesetzlich",
+						"value": "Gesetzlich",
+						"next_slide": false,
+						"next_slide_type": null
+					},
+					{
+						"icon": "🤵",
+						"title": "Privat",
+						"value": "Privat",
+						"next_slide": false,
+						"next_slide_type": null
+					}
+				],
+				"text_options": false,
+				"input_options": false,
+				"alternative_type": false,
+				"show_progressbar": false,
+				"multiselect": false,
+				"show_send_btn": false
+			},
+			{
+				"id": "upload_rezept",
+				"title": "Bitte laden Sie ein Foto von Ihrem Rezept hoch",
+				"type": "file_upload",
+				"reason": "Wir benötigen Informationen wie das Heilmittel, um Ihnen den besten Physiotherapeuten an die Seite stellen zu können. Es können nur Bilder hochgeladen werden. Wenn Ihr Rezept ein PDF ist, können Sie einen Screenshot davon machen oder die Rezeptdaten manuell eingeben. <img width='1024' height='767' src='https://dev-pro-physio.strayfe.dev/wp-content/uploads/2024/02/HM_Muster_13_aaec3c5def_csm.webp' class='brxe-image home__leistungen-bild css-filter size-large mt-1' decoding='async'>",
+				"alternative_method": true,
+				"alternative_method_data": {
+					"button_text": "Stattdessen Rezeptdaten eingeben",
+					"answers_data_name": "Angaben zum Rezept",
+					"additional_slide_id": "manual_rezept_data"
+				},
+				"input_options": [
+					{
+						"label": "Rezept hochladen",
+						"placeholder": "Wählen oder Bild aufnehmen",
+						"input_name": "input_rezept",
+						"type": "file",
+						"accept": "image/jpeg, image/png, image/gif, image/heic, image/heif",
+						"max_size": "5"
+					}
+				]
+			},
+			{
+				"id": "opt-in",
+				"title": "Jetzt Termin vereinbaren",
+				"subtitle": "Fast fertig! Bitte geben Sie noch Ihre Kontaktdaten ein, damit wir uns bei Ihnen melden können.",
+				"subtitle_highlight": true,
+				"reason": false,
+				"type": "opt_in",
+				"image_options": false,
+				"icon_options": false,
+				"text_options": false,
+				"input_options": [
+					{
+						"label": "Ihr Vorname",
+						"placeholder": "Ihr Vorname",
+						"value": "first_name",
+						"input_name": "input_vorname",
+						"type": "text",
+						"required": true,
+						"validation": "text"
+					},
+					{
+						"label": "Ihr Nachname",
+						"placeholder": "Ihr Nachname",
+						"value": "last_name",
+						"input_name": "input_nachname",
+						"type": "text",
+						"required": true,
+						"validation": "text"
+					},
+					{
+						"label": "Ihre E-Mail-Adresse",
+						"placeholder": "E-Mail (keine Werbung)",
+						"value": "email",
+						"input_name": "input_email",
+						"type": "text",
+						"required": true,
+						"validation": "email"
+					},
+					{
+						"label": "Ihre Telefonnummer",
+						"placeholder": "Ihre Telefonnummer (bei Rückfragen)",
+						"value": "phone",
+						"input_name": "input_telefon",
+						"type": "number",
+						"required": true,
+						"validation": "text"
+					},
+					{
+						"label": "Anmerkungen (optional)",
+						"placeholder": "Anmerkungen (optional)",
+						"value": "comments",
+						"input_name": "input_comments",
+						"type": "text",
+						"required": false,
+						"validation": "text"
+					},
+					{
+						"label": "",
+						"placeholder": "",
+						"value": "gdpr_accept",
+						"input_name": "input_gdpr",
+						"type": "checkbox",
+						"validation": "checkbox"
+					}
+				],
+				"alternative_type": false,
+				"show_progressbar": false,
+				"multiselect": false,
+				"show_send_btn": true
+			},
+			{
+				"id": "thank-you",
+				"title": "Vielen Dank! Wir haben Ihre Anfrage erhalten.",
+				"subtitle": "Wir melden uns in Kürze bei Ihnen und vereinbaren einen Termin.",
+				"subtitle_highlight": false,
+				"reason": false,
+				"type": "thank_you",
+				"image_options": false,
+				"icon_options": false,
+				"text_options": false,
+				"input_options": false,
+				"alternative_type": false,
+				"thank_you_options": {
+					"img": false,
+					"icon": "🎉"
+				},
+				"show_progressbar": false,
+				"multiselect": false,
+				"show_send_btn": false,
+				"thank_you_content": {
+					"next-steps": false,
+					"benefits": false
+				}
+			}
+		],
+		"additional_slides": [
+			{
+				"id": "manual_rezept_data",
+				"title": "Bitte geben Sie die Rezeptdaten manuell ein",
+				"type": "manual_entry",
+				"input_options": [
+					{
+						"label": "Welches Heilmittel?",
+						"placeholder": "Heilmittel eingeben",
+						"input_name": "Heilmittel",
+						"type": "text"
+					},
+					{
+						"label": "Datum auf dem Rezept",
+						"placeholder": "Datum eingeben",
+						"input_name": "Datum des Heilmittels",
+						"type": "text"
+					},
+					{
+						"label": "Anzahl der Therapien",
+						"placeholder": "Anzahl eingeben",
+						"input_name": "Anzahl der Therapien",
+						"type": "text"
+					}
+				]
+			}
+		],
+		"content_slides": [
+			{
+				"id": "slide-1-fail",
+				"title": "Sie haben kein Rezept vom Arzt und möchte dennoch Leistungen in Anspruch nehmen?",
+				"subtitle": "Dann rufen Sie uns bitte direkt unter <strong>0251 / 971 34 980</strong> an oder senden Sie uns eine Nachricht über das Kontaktformular.",
+				"subtitle_highlight": false,
+				"type": "link_to_page",
+				"link_to_page": "/kontakt/",
+				"link_btn_text": "Nachricht senden",
+				"slide_content": {
+					"normal_text_1": "",
+					"normal_text_2": "",
+					"normal_text_3": ""
+				}
+			}
+		],
+		"homepage_link": "/",
+		"ty_page_link": "/faq/",
+		"ty_btn_name": "Erster Termin: Fragen & Antworten",
+		"gdpr_link": "/datenschutz/"
+	}
+]
